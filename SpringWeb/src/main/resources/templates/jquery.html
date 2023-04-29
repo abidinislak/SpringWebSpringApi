@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments :: header}">
+
+</head>
+<body>
+
+
+<div class="container">
+    <nav th:replace="~{fragments :: navbar}">
+    </nav>
+
+    <br/>
+    <br/>
+    <br/>
+    <p id="p1"></p>
+
+
+    <div class="card"></div>
+
+    <div class="card-header">This list return froam api and show user list</div>
+
+    <div class="card-body">
+
+        <table class="table-hover">
+            <thead>
+            <tr>
+                <th>name</th>
+                <th>descripytion</th>
+
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+
+
+        </table>
+    </div>
+
+</div>
+
+
+<link href="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.css" rel="stylesheet">
+<script src="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.js"></script>
+<script th:src="@{/js/jquery.js}" type="text/javascript"></script>
+<script th:src="@{/js/fetchTable.js}" type="text/javascript"></script>
+</body>
+</html>

@@ -1,19 +1,29 @@
-package com.SpringWeb.SpringWeb.dto;
+package com.SpringRestApi.SpringRestApi.entity;
 
-public class User_Dto {
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+
+public class User_D {
 
 
-    private int id;
-    private String name;
-    private String description;
-
-    public User_Dto() {
-    }
-
-    public User_Dto(String name, String description) {
+    public User_D(String name, String description) {
         this.name = name;
         this.description = description;
     }
+
+    public User_D() {
+    }
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+    private String name;
+
+    private String description;
 
     public int getId() {
         return id;
